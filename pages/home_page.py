@@ -1,4 +1,3 @@
-import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select, WebDriverWait
@@ -7,7 +6,14 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import TimeoutException
 
+import pytest
+
 class HomePagePOM:
+    """Page object for the Crypto Finance home page.
+    
+    Provides methods for navigation, language switching,
+    and interaction with the home page widgets.
+    """
 
     URL = "https://www.crypto-finance.com/"
     EXPECTED_TITLE_CONTAINS = "Crypto Finance"
